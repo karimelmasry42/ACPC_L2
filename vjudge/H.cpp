@@ -1,18 +1,16 @@
-#include <cmath>
 #include <iostream>
-#define ll long long
+#include <string>
 using namespace std;
 int main() {
-  ll a, copy, len;
+  string a;
   cin >> a;
-  for (len = 1, copy = a; copy; len++, copy /= 10) {
-  }
-  while (--len)
-    if (!(((int)(a / pow(10, len - 1))) % 10)) {
-      a = (a - a % (int)pow(10, len)) / 10 + (a % (int)pow(10, len - 1));
+  for (int i = 0; i < a.length(); i++)
+    if (a[i] == '0') {
+      a.erase(a.begin() + i);
       cout << a;
       exit(0);
     }
-  cout << a / 10;
+  a.pop_back();
+  cout << a;
   return 0;
 }

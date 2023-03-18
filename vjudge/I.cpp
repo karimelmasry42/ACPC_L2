@@ -1,6 +1,4 @@
-#include <algorithm>
 #include <iostream>
-#include <vector>
 using namespace std;
 int main() {
   int n, B = 0, C = 0, a;
