@@ -1,18 +1,14 @@
-#include <iostream>
-#include <vector>
+#include <bits/stdc++.h>
 using namespace std;
 int main() {
   int t, n, k, temp, right, i;
   cin >> t;
   while (t--) {
-    vector<int> a;
     cin >> n >> k;
+    vector<int> a(n);
     right = n - 1;
-    i = n;
-    while (i--) {
-      cin >> temp;
-      a.push_back(temp);
-    }
+    for (int &i : a)
+      cin >> i;
     for (int i = 0; i < right; i++)
       if (a[i] >= k) {
         a[i] -= k;

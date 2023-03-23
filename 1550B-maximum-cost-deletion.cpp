@@ -1,19 +1,16 @@
-#include <iostream>
-#include <string>
+#include <bits/stdc++.h>
 using namespace std;
 int main() {
-  int t;
+  int t, n, a, b;
+  string s;
   cin >> t;
   while (t--) {
-    int n, a, b;
-    cin >> n >> a >> b;
-    string s;
-    cin >> s;`
-    int d(0);
-    for (int p = 1; p < s.size(); p++)
+    cin >> n >> a >> b >> s;
+    int d = 0;
+    for (int p = 1; p < s.length(); p++)
       d += (s[p] != s[p - 1]);
     int factor = (b >= 0) ? n : (1 + (d + 1) / 2);
-    printf("%ld\n", n * a + factor * b);
+    cout << n * a + factor * b << endl;
   }
   return 0;
 }

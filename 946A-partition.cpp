@@ -1,15 +1,12 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 int main() {
-  int n, B = 0, C = 0, a;
+  int n, a, diff = 0;
   cin >> n;
   while (n--) {
     cin >> a;
-    if (a > 0)
-      B += a;
-    else
-      C += a;
+    diff += (a > 0) ? a : -a;
   }
-  cout << B - C;
+  cout << diff;
   return 0;
 }

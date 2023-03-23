@@ -1,21 +1,14 @@
-#include <iostream>
-#include <vector>
+#include <bits/stdc++.h>
 using namespace std;
 int main() {
-  int n, m, price, max = 0;
+  int n, m, max = 0;
   cin >> n >> m;
-  vector<int> a;
-  while (n--) {
-    cin >> price;
-    a.push_back(price);
-  }
+  vector<int> a(n);
+  for (int &i : a)
+    cin >> i;
   sort(a.begin(), a.end());
-  int i = 0;
-  while (m--) {
-    if (a[i] < 0)
-      max -= a[i];
-    i++;
-  }
-  cout << '\n' << max;
+  for (int i = 0; i < m; i++)
+    max -= (a[i] < 0) ? a[i] : 0;
+  cout << max << endl;
   return 0;
 }
