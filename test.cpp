@@ -1,12 +1,8 @@
 #include <iostream>
-#include <set>
+#include <stdio.h>
 #include <vector>
 using namespace std;
 int main() {
-  vector<int> x(5);
-  for (int &i : x)
-    cin >> i;
-  for (int i : x)
-    cout << i;
-  return 0;
+  for (int i = 1; i < 8; i++)
+    printf("%d, ", i);
 }
