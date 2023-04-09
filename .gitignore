@@ -1,3 +1,3 @@
-.DS_Store
-.vscode/
-!*.cpp
+**/.DS_Store
+**/.vscode/
+**/output/
