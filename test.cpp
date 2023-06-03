@@ -13,9 +13,9 @@ bool is_prime(int a) {
 }
 int main() {
   while (true) {
-    int n;
-    cin >> n;
-    cout << is_prime(n) << endl;
+    int a;
+    cin >> a;
+    cout << (-~-a) << endl;
   }
   return 0;
 }
